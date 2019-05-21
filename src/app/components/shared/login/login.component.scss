@@ -1,0 +1,141 @@
+.container {
+    border: 1px solid grey;
+    max-width: 450px;
+    min-height: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.container-switch {
+    height: 50px;
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    color: White;
+    cursor: pointer;
+}
+
+.switch-login,
+.switch-register {
+    width: 50%;
+    text-align: center;
+    /* border: 1px solid red; */
+    height: 100%;
+    font-size: 20px;
+    background: #b3b3b3;
+    /* border:1px solid grey; */
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.switch-login p,
+.switch-register p {
+    margin: 12px 0px 0px 0px;
+}
+
+.switch-login label,
+.switch-register label {
+    padding-top: 20px;
+}
+
+.switch-focus {
+    background: white;
+    color: #1a1aff;
+    border-bottom: none;
+}
+
+.hide-container {
+    display: none;
+}
+
+.container-login,
+.container-register {
+    width: 100%;
+    border-bottom: 1px solid grey;
+    min-height: 250px;
+    padding-bottom: 50px;
+}
+
+.container-reset {
+    width: 100%;
+    height: 50px;
+}
+
+.reset-link {
+    padding: 15px;
+    text-decoration: underline;
+}
+
+.login-data {
+    width: 80%;
+    padding-top: 30px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    font-size: 20px;
+
+}
+
+.login-data p {
+    margin: 0;
+    color: grey;
+    display: inline-block;
+}
+
+.login-data p:hover {
+    color: #1a1aff;
+}
+
+.login-data p:hover+.text-field {
+    border: 1px solid #1a1aff;
+}
+
+.login-data input {
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+    font-size: 18px;
+    width: 100%;
+}
+
+.login-data input:hover,
+.login-data input:focus {
+    border: 1px solid #1a1aff;
+}
+
+.login-submit {
+    height: 30px;
+    cursor: pointer;
+    background: #b3b3b3;
+    color: white;
+    border: 1px solid gray;
+}
+
+.login-submit-area {
+    width: 80%;
+    padding-top: 30px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.login-submit-area input {
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+    font-size: 18px;
+    width: 100%;
+}
+
+.login-submit-area input:hover {
+    border: 1px solid #1a1aff;
+    color: #1a1aff;
+    padding: 0;
+}
+
+.reset-link a:hover {
+    color: #1a1aff;
+    cursor: pointer;
+}

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 
 export class Item {
@@ -18,9 +18,11 @@ export class Item {
 export class AnnouncementsComponent implements OnInit {
 
   public items = null;
+  public inputData;
   public userId;
+  public id;
 
-  constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth) {
+  constructor(private db: AngularFirestore, private afAuth: AngularFireAuth) {
     // let cleaner = this.afAuth.authState.subscribe(user => {
     //   if (user) this.userId = user.uid
     //   console.log(this.userId);
@@ -34,8 +36,9 @@ export class AnnouncementsComponent implements OnInit {
         this.userId = user.uid
       }
       console.log(this.userId);
+      this.id = this.userId;
 
-      this.getItemsList();
+      // this.getItemsList();
     })
     // this.userId = localStorage.getItem(user.uid);
 
@@ -45,13 +48,15 @@ export class AnnouncementsComponent implements OnInit {
 
   // Return an observable list with optional query
   // You will usually call this from OnInit in a component
-  getItemsList() {
-    // console.log(this.userId);
-
-    if (!this.userId) return;
-    this.items = this.db.list(`items/${this.userId}`);
-    console.log("items:", this.items);
-    this.createItem('asdas');
+  addData() {
+    console.log('enter');
+    // if (!this.id) return;
+    // this.items = this.db.list(`announcements/${this.userId}`);
+    let data = this.db.collection('announcements').add({
+      data: this.inputData,
+    })
+    console.log("data:", data);
+    // this.createItem();
 
   }
 

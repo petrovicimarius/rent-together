@@ -17,6 +17,15 @@ export const environment = {
   sign_up: '/sign_up',
   sign_in: '/sign_in',
   sign_out: '/sign_out',
+  firebase: {
+    apiKey: "AIzaSyBThvkwylTRKSYEnZr-dIhhoehsLIJjzac",
+    authDomain: "rent-together.firebaseapp.com",
+    databaseURL: "https://rent-together.firebaseio.com",
+    projectId: "rent-together",
+    storageBucket: "rent-together.appspot.com",
+    messagingSenderId: "1316555477",
+    appId: "1:1316555477:web:446388aff1715507"
+  },
 };
 
 /*

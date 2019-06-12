@@ -1,3 +1,97 @@
-<p>
-  login works!
-</p>
+<!-- <div class="content">
+  <div class="container">
+    <div class="container-switch">
+      <div class="switch-login" [ngClass]="{'switch-focus': focusLogin}" (click)="switchState('login')">
+        <p>Log In</p>
+      </div>
+      <div class="switch-register" [ngClass]="{'switch-focus': focusRegister}" (click)="switchState('register')">
+        <p>Register</p>
+      </div>
+    </div>
+    <div class="container-login" [ngClass]="{'hide-container': focusRegister || focusReset}">
+      <form (ngSubmit)="loginUser()" #login>
+        <div class="login-data" #login>
+          <p (click)="changeFocus()">Email</p>
+          <input id="email" class="text-field" type="text" name="email">
+        </div>
+        <div class="login-data">
+          <p>Password</p>
+          <input class="text-field" type="text" name="password">
+        </div>
+        <div class="login-submit-area">
+          <input class="login-submit" type="submit" value="LOG IN" (click)="onLogin()">
+        </div>
+      </form>
+    </div>
+    <div class="container-register" [ngClass]="{'hide-container': focusLogin || focusReset}">
+      <div class="login-data">
+        <p>Name</p>
+        <input class="text-field" type="text">
+      </div>
+      <div class="login-data">
+        <p>Email</p>
+        <input class="text-field" type="text">
+      </div>
+      <div class="login-data">
+        <p>Password</p>
+        <input class="text-field" type="text">
+      </div>
+      <div class="login-submit-area">
+        <input class="login-submit" type="submit" value="REGISTER" (click)="onLogin()">
+      </div>
+    </div>
+    <div class="container-change-password" [ngClass]="{'hide-container': focusLogin || focusRegister}">
+      <div class="info-message">
+        <p></p>
+      </div>
+      <div class="login-data">
+        <p>Email</p>
+        <input class="text-field" type="text">
+      </div>
+      <div class="login-submit-area">
+        <input class="login-submit" type="submit" value="RESET PASSWORD" (click)="onLogin()">
+      </div>
+    </div>
+    <div class="container-reset" [ngClass]="{'hide-container': focusReset}">
+      <div class="reset-link">
+        <a (click)="switchState('reset')">Forgotten your password?</a>
+      </div>
+    </div>
+
+  </div>
+</div> -->
+
+<div class="displayTable">
+  <div class="displayTableCell">
+    <div class="authBlock">
+      <h3>Sign In</h3>
+      <div class="formGroup">
+        <input type="text" class="formControl" placeholder="Username" #userName required>
+      </div>
+      <div class="formGroup">
+        <input type="password" class="formControl" placeholder="Password" #userPassword required>
+      </div>
+      <!-- Calling SignIn Api from AuthService -->
+      <div class="formGroup">
+        <input type="button" class="btn btnPrimary" value="Log in"
+          (click)="authService.SignIn(userName.value, userPassword.value)">
+      </div>
+      <div class="formGroup">
+        <span class="or"><span class="orInner">Or</span></span>
+      </div>
+      <!-- Calling GoogleAuth Api from AuthService -->
+      <div class="formGroup">
+        <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+          <i class="fab fa-google-plus-g"></i>
+          Log in with Google
+        </button>
+      </div>
+      <div class="forgotPassword">
+        <span routerLink="/forgot-password">Forgot Password?</span>
+      </div>
+    </div>
+    <div class="redirectToLogin">
+      <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+    </div>
+  </div>
+</div>

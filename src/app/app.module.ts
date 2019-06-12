@@ -16,7 +16,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { AuthService } from "./services/auth-guard/auth.service";
 import { AngularFireModule } from '@angular/fire';
-// import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { MaterialModule } from './material-module';
 import { SideMenuComponent } from './components/shared/side-menu/side-menu.component';
 import { TopBarComponent } from './components/shared/top-bar/top-bar.component';
@@ -40,6 +40,10 @@ import { PostService } from './services/post-service';
     HttpClientModule,
     AppRoutingModule,
     MaterialModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule,
     // BrowserAnimationsModule,
   ],
   exports: [
@@ -52,6 +56,8 @@ import { PostService } from './services/post-service';
     // AuthGuard,
     AuthService,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ],
 })
 export class AppModule { }

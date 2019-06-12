@@ -24,7 +24,7 @@
         "src/app/component-module.ts"
       ],
       "@shared/*": [
-        "src/app/components/admin/shared/*"
+        "src/app/components/shared/*"
       ],
       "@admin/*": [
         "src/app/components/admin/*"

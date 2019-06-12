@@ -44,14 +44,14 @@
     content: 'aa';
     width: 15px;
     height: 15px;
-    background: $url-common $arrow-off;
+    // background: $url-common $arrow-off;
     color: transparent;
     margin-left: 10px;
 }
 
 .profile-info:hover:after,
 .profile-info:focus:after {
-    background: $url-common $arrow-on;
+    // background: $url-common $arrow-on;
 }
 
 .profile-name {

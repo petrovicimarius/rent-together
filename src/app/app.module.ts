@@ -1,25 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './src/app/components/shared/dashboard/dashboard.component';
-import { LoginComponent } from './src/app/components/shared/login/login.component';
-import { RegisterComponent } from './src/app/components/shared/register/register.component';
+import { DashboardComponent } from './components/shared/dashboard/dashboard.component';
+import { LoginComponent } from './components/shared/login/login.component';
+import { RegisterComponent } from './components/shared/register/register.component';
 import { ProfileComponent } from './components/admin/profile/profile.component';
 import { AnnouncementsComponent } from './components/admin/announcements/announcements.component';
 import { RatingComponent } from './components/admin/rating/rating.component';
-<<<<<<< Updated upstream
-=======
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
-import { AuthService } from "./components/shared/services/auth.service";
+import { AuthService } from "./services/auth-guard/auth.service";
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+// import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { MaterialModule } from './material-module';
 import { SideMenuComponent } from './components/shared/side-menu/side-menu.component';
 import { TopBarComponent } from './components/shared/top-bar/top-bar.component';
->>>>>>> Stashed changes
+import { PostService } from './services/post-service';
 
 @NgModule({
   declarations: [
@@ -34,10 +35,23 @@ import { TopBarComponent } from './components/shared/top-bar/top-bar.component';
     TopBarComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    MaterialModule,
+    // BrowserAnimationsModule,
   ],
-  providers: [],
+  exports: [
+    MaterialModule,
+  ],
+  providers: [
+    // ApiConnectionService,
+    PostService,
+    // DatePipe,
+    // AuthGuard,
+    AuthService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

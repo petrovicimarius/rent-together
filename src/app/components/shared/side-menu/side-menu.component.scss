@@ -103,30 +103,30 @@
 }
 
 .users-logo {
-    background: $url-common $users-of;
+    // background: $url-common $users-of;
 }
 
 .assets-logo {
-    background: $url-common $assets-of;
+    // background: $url-common $assets-of;
 }
 
 .entities-logo {
-    background: $url-common $entities-of;
+    // background: $url-common $entities-of;
 }
 
 .entities-container:hover .entities-logo,
 .entities-logo-active {
-    background: $url-common $entities-on;
+    // background: $url-common $entities-on;
 }
 
 .assets-container:hover .assets-logo,
 .assets-logo-active {
-    background: $url-common $assets-on;
+    // background: $url-common $assets-on;
 }
 
 .users-container:hover .users-logo,
 .users-logo-active {
-    background: $url-common $users-on;
+    // background: $url-common $users-on;
 }
 
 #menuToggle input,

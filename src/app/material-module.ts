@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import {
     MatTableModule,
     MatPaginatorModule,
@@ -17,6 +18,23 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
+    imports: [
+        CommonModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatAutocompleteModule,
+        MatTabsModule,
+        MatDialogModule,
+        MatButtonModule,
+        MatIconModule,
+        MatMenuModule,
+        MatCheckboxModule,
+        MatExpansionModule,
+        MatTooltipModule,
+    ],
     exports: [
         MatTableModule,
         MatPaginatorModule,

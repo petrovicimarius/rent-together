@@ -14,6 +14,12 @@ export class LoginComponent implements OnInit {
   focusRegister: boolean = false;
   focusReset: boolean = false;
   public text: string;
+  loginData = {
+    email: '',
+    name: '',
+    password: '',
+    confirm_password: '',
+  }
 
   constructor(
     public authService: AuthService,

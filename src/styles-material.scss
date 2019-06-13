@@ -1,5 +1,30 @@
 @import './styles-shared.scss';
 
+.mat-focused .mat-form-field-required-marker {
+    color: $purple !important;
+}
+
+.login-component {
+    .mat-form-field-wrapper:hover {
+        color: $purple !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .mat-tab-body-content {
     height: 0px !important;
 }

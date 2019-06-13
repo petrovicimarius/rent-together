@@ -1,9 +1,15 @@
+@import './../../../../styles-shared.scss';
+
 .container {
-    border: 1px solid grey;
+    border: 1px solid $purple;
     max-width: 450px;
     min-height: 400px;
     margin: 0 auto;
     border-radius: 5px;
+}
+
+mat-form-field {
+    width: 100%;
 }
 
 .container-switch {
@@ -19,14 +25,19 @@
 .switch-register {
     width: 50%;
     text-align: center;
-    /* border: 1px solid red; */
     height: 100%;
     font-size: 20px;
-    background: #b3b3b3;
-    /* border:1px solid grey; */
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
-    border-bottom: 1px solid grey;
+    background: $secondary-color;
+    border-bottom: 1px solid $purple;
+}
+
+.switch-login {
+    border-right: 1px solid $purple;
+    border-top-left-radius: 5px;
+}
+
+.switch-register {
+    border-top-right-radius: 5px;
 }
 
 .switch-login p,
@@ -41,7 +52,7 @@
 
 .switch-focus {
     background: white;
-    color: #1a1aff;
+    color: $purple;
     border-bottom: none;
 }
 
@@ -52,7 +63,7 @@
 .container-login,
 .container-register {
     width: 100%;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid $purple;
     min-height: 250px;
     padding-bottom: 50px;
 }
@@ -68,9 +79,9 @@
 }
 
 .login-data {
-    width: 80%;
+    width: 100%;
+    max-width: 350px;
     padding-top: 30px;
-    /* border: 1px solid red; */
     margin: 0 auto;
     font-size: 20px;
 
@@ -82,34 +93,34 @@
     display: inline-block;
 }
 
-.login-data p:hover {
-    color: #1a1aff;
-}
+// .login-data p:hover {
+//     color: #1a1aff;
+// }
 
-.login-data p:hover+.text-field {
-    border: 1px solid #1a1aff;
-}
+// .login-data p:hover+.text-field {
+//     border: 1px solid #1a1aff;
+// }
 
 .login-data input {
     height: 40px;
     border-radius: 5px;
     outline: none;
-    border: 1px solid gray;
+    // border: 1px solid gray;
     font-size: 18px;
     width: 100%;
 }
 
-.login-data input:hover,
-.login-data input:focus {
-    border: 1px solid #1a1aff;
-}
+// .login-data input:hover,
+// .login-data input:focus {
+//     border: 1px solid #1a1aff;
+// }
 
 .login-submit {
     height: 30px;
     cursor: pointer;
-    background: #b3b3b3;
+    background: $secondary-color;
     color: white;
-    border: 1px solid gray;
+    // border: 1px solid gray;
 }
 
 .login-submit-area {
@@ -124,18 +135,18 @@
     height: 40px;
     border-radius: 5px;
     outline: none;
-    border: 1px solid gray;
+    border: 1px solid $purple;
     font-size: 18px;
     width: 100%;
 }
 
 .login-submit-area input:hover {
-    border: 1px solid #1a1aff;
-    color: #1a1aff;
+    border: 1px solid $purple;
+    color: $purple;
     padding: 0;
 }
 
 .reset-link a:hover {
-    color: #1a1aff;
+    color: $purple;
     cursor: pointer;
 }

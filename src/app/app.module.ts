@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -41,10 +42,11 @@ import { PostService } from './services/post-service';
     AppRoutingModule,
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
+    MatPasswordStrengthModule.forRoot(),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
-    // BrowserAnimationsModule,
+    BrowserAnimationsModule,
   ],
   exports: [
     MaterialModule,

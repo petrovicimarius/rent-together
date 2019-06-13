@@ -1,4 +1,4 @@
-<!-- <div class="content">
+<div class="content login-component">
   <div class="container">
     <div class="container-switch">
       <div class="switch-login" [ngClass]="{'switch-focus': focusLogin}" (click)="switchState('login')">
@@ -11,18 +11,37 @@
     <div class="container-login" [ngClass]="{'hide-container': focusRegister || focusReset}">
       <form (ngSubmit)="loginUser()" #login>
         <div class="login-data" #login>
-          <p (click)="changeFocus()">Email</p>
-          <input id="email" class="text-field" type="text" name="email">
+          <!-- <p (click)="changeFocus()">Email</p> -->
+          <mat-form-field>
+            <input matInput type="email" [(ngModel)]="loginData.email" class="mat-select" id="email" placeholder="Email"
+              required pattern="[a-zA-Z0-9.-_]{2,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" #email="ngModel" name="email">
+            <mat-error *ngIf="email.invalid && (email.dirty || email.touched) && email.errors.required">
+              Email is required!
+            </mat-error>
+            <mat-error *ngIf="email.invalid && (email.dirty || email.touched) && email.errors.pattern">
+              Email format doesn't match!
+            </mat-error>
+          </mat-form-field>
         </div>
         <div class="login-data">
-          <p>Password</p>
-          <input class="text-field" type="text" name="password">
+          <mat-form-field>
+            <input matInput type="password" [(ngModel)]="loginData.password" class="mat-select" id="password"
+              name="password" placeholder="Password" required minlength="6" #password="ngModel" autocomplete="off">
+            <mat-error *ngIf="password.invalid && (password.dirty || password.touched) && password.errors.required">
+              Password cannot be empty!
+            </mat-error>
+            <mat-error *ngIf="password.invalid && (password.dirty || password.touched) && password.errors.minlength">
+              Password lenght must be minimum 6 characters!
+            </mat-error>
+          </mat-form-field>
         </div>
         <div class="login-submit-area">
-          <input class="login-submit" type="submit" value="LOG IN" (click)="onLogin()">
+          <input type="button" class="btn btnPrimary" value="Log in"
+            (click)="authService.SignIn(userName.value, userPassword.value)">
         </div>
       </form>
     </div>
+
     <div class="container-register" [ngClass]="{'hide-container': focusLogin || focusReset}">
       <div class="login-data">
         <p>Name</p>
@@ -59,7 +78,7 @@
     </div>
 
   </div>
-</div> -->
+</div>
 
 <div class="displayTable">
   <div class="displayTableCell">
@@ -76,11 +95,11 @@
         <input type="button" class="btn btnPrimary" value="Log in"
           (click)="authService.SignIn(userName.value, userPassword.value)">
       </div>
-      <div class="formGroup">
+      <!-- <div class="formGroup">
         <span class="or"><span class="orInner">Or</span></span>
-      </div>
+      </div> -->
       <!-- Calling GoogleAuth Api from AuthService -->
-      <div class="formGroup">
+      <!-- <div class="formGroup">
         <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
           <i class="fab fa-google-plus-g"></i>
           Log in with Google
@@ -88,10 +107,10 @@
       </div>
       <div class="forgotPassword">
         <span routerLink="/forgot-password">Forgot Password?</span>
-      </div>
+      </div> -->
     </div>
-    <div class="redirectToLogin">
+    <!-- <div class="redirectToLogin">
       <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
-    </div>
+    </div> -->
   </div>
 </div>

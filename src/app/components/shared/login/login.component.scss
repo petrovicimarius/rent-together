@@ -3,7 +3,7 @@
 .container {
     border: 1px solid $purple;
     max-width: 450px;
-    min-height: 400px;
+    min-height: 280px;
     margin: 0 auto;
     border-radius: 5px;
 }
@@ -75,13 +75,14 @@ mat-form-field {
 
 .reset-link {
     padding: 15px;
+    color: $secondary-color;
     text-decoration: underline;
 }
 
 .login-data {
     width: 100%;
     max-width: 350px;
-    padding-top: 30px;
+    // padding-top: 30px;
     margin: 0 auto;
     font-size: 20px;
 
@@ -135,9 +136,11 @@ mat-form-field {
     height: 40px;
     border-radius: 5px;
     outline: none;
+    color: $background-color;
     border: 1px solid $purple;
     font-size: 18px;
     width: 100%;
+    background: $secondary-color;
 }
 
 .login-submit-area input:hover {

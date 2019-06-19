@@ -1,5 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
-import { User } from "../services/user";
+import { User } from "../../interfaces/user";
 import { auth } from 'firebase/app';
 import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
@@ -28,6 +28,15 @@ export class AuthService {
             }
         })
     }
+
+    isAuthenticated() {
+        if (localStorage.getItem('access-token') != null && localStorage.getItem('client') != null && localStorage.getItem('uid') != null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     // Sign in with email/password
     SignIn(email, password) {
         return this.afAuth.auth.signInWithEmailAndPassword(email, password)

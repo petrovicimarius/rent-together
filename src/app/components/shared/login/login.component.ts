@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { AuthService } from "../../shared/services/auth.service";
+import { AuthService } from "./../../../services/auth-guard/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -14,6 +14,12 @@ export class LoginComponent implements OnInit {
   focusRegister: boolean = false;
   focusReset: boolean = false;
   public text: string;
+  loginData = {
+    email: '',
+    name: '',
+    password: '',
+    confirm_password: '',
+  }
 
   constructor(
     public authService: AuthService,

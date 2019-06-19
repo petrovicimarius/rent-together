@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/shared/dashboard/dashboard.component';
@@ -12,9 +15,13 @@ import { RatingComponent } from './components/admin/rating/rating.component';
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
-import { AuthService } from "./components/shared/services/auth.service";
+import { AuthService } from "./services/auth-guard/auth.service";
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { MaterialModule } from './material-module';
+import { SideMenuComponent } from './components/shared/side-menu/side-menu.component';
+import { TopBarComponent } from './components/shared/top-bar/top-bar.component';
+import { PostService } from './services/post-service';
 
 @NgModule({
   declarations: [
@@ -24,18 +31,35 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     RegisterComponent,
     ProfileComponent,
     AnnouncementsComponent,
-    RatingComponent
+    RatingComponent,
+    SideMenuComponent,
+    TopBarComponent
   ],
   imports: [
-    BrowserModule,
     FormsModule,
+    BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
+    MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
+    MatPasswordStrengthModule.forRoot(),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
+    BrowserAnimationsModule,
   ],
-  providers: [AuthService],
-  bootstrap: [AppComponent]
+  exports: [
+    MaterialModule,
+  ],
+  providers: [
+    // ApiConnectionService,
+    PostService,
+    // DatePipe,
+    // AuthGuard,
+    AuthService,
+  ],
+  bootstrap: [
+    AppComponent
+  ],
 })
 export class AppModule { }

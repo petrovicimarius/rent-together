@@ -1,3 +1,91 @@
-<p>
-  dashboard works!
-</p>
+<!-- <app-page-header></app-page-header> -->
+<div class="page-content">
+  <div class="container-background">
+    <div class="container-slogan">
+      <div class="slogan">
+        <p>{{slogan}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="filter">
+      <div class="container-mark">
+        <p>Filter</p>
+
+        <div class="all-marks" *ngFor="let mark of markExample">
+          <button class="marks" (click)="toggleMarkState(mark.text)">{{mark.text}}</button>
+          <div class="mark-model" *ngIf="markState">
+            <label class="checkModel" *ngFor="let model of modelExample">{{model.text}}
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="container-fuel">
+        <p>Fuel</p>
+        <div class="fuel-type">
+          <input type="checkbox" name="diesel" value="diesel">Diesel<br>
+          <input type="checkbox" name="petrol" value="petrol">Petrol<br>
+        </div>
+      </div>
+      <div class="container-price">
+        <p>Price range</p>
+        <div class="price-slider">
+          <ng5-slider [(value)]="verticalSlider.minValue" [(highValue)]="verticalSlider.maxValue"
+            [options]="verticalSlider.options"></ng5-slider>
+        </div>
+      </div>
+    </div>
+    <div class="container-announcements">
+      <div class="container-announcement" *ngFor="let item of announcementExample" (mouseenter)="focusPoint(true)"
+        (mouseleave)="focusPoint(false)">
+        <div class="announcement">
+          <div (click)="redirectTo(item.id)" style="display: flex">
+            <div class="announcement-front-image">
+              <img class="front-image" src="./assets/fundal1.jpeg">
+            </div>
+            <div class="name-description">
+              <div class="announcement-name">
+                Audi A4
+              </div>
+              <div class="announcement-description">
+                I`m renting Audi A4 for one day.
+              </div>
+            </div>
+          </div>
+          <div class="container-rating-save-call">
+            <div class="rating-save-call">
+              <rating [max]="5" class="fa-star" step="0.5" fullIcon="★" emptyIcon="☆" [float]="true"
+                [titles]="['one', 'two', 'three', 'four', 'five']"></rating>
+            </div>
+            <div class="rating-save-call">
+              <button class="fa fa-phone-square"></button>
+            </div>
+            <div class="rating-save-call">
+              <button class="fa fa-bookmark-o"></button>
+            </div>
+          </div>
+        </div>
+        <!-- <hr> -->
+      </div>
+    </div>
+    <!-- <div class="col-md-6 fixed-posi bg-light">
+      <div class="h-100 d-flex align-items-center justify-content-center">
+        <p>Content goes here... (fixed position)</p>
+      </div>
+    </div> -->
+    <div class="google-map">
+      <div class="container-map" [ngClass]="{'on-scroll-map': checkScroll}">
+        <agm-map [zoom]="zoom" [latitude]="lat" [longitude]="lng">
+          <agm-marker *ngFor="let point of mapPoints" [latitude]="point.lat" [longitude]="point.lng" [ngClass]="focus">
+          </agm-marker>
+        </agm-map>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- <app-page-footer></app-page-footer> -->

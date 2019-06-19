@@ -23,6 +23,10 @@ import { SideMenuComponent } from './components/shared/side-menu/side-menu.compo
 import { TopBarComponent } from './components/shared/top-bar/top-bar.component';
 import { PostService } from './services/post-service';
 
+import { Ng5SliderModule } from 'ng5-slider';
+import { RatingModule } from "ngx-rating";
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +43,7 @@ import { PostService } from './services/post-service';
     FormsModule,
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -47,6 +52,11 @@ import { PostService } from './services/post-service';
     AngularFireAuthModule,
     AngularFirestoreModule,
     BrowserAnimationsModule,
+    Ng5SliderModule,
+    RatingModule,
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyAqcFHBPQuY6E-Fd5mn9DKlks8tHhHHewM"
+    }),
   ],
   exports: [
     MaterialModule,

@@ -1,0 +1,124 @@
+<div class="content">
+  <div class="top-background">
+  </div>
+  <div class="container-info-rent">
+
+    <form>
+      <div class="submit">
+        <input type="submit">
+      </div>
+      <div class="make-model-category">
+        <div class="filter-category-name" (click)="expandFunction('model')">
+          <p>Make, Model <span class="fa fa-arrow-up" *ngIf="expandModel"></span> <span class="fa fa-arrow-down"
+              *ngIf="!expandModel"></span></p>
+
+        </div>
+        <div class="mark-model" [ngClass]="{'restrict': !expandModel}">
+          <div class="container-mark">
+            <p>Mark</p>
+            <select class="select-mark">
+              <option value="any" selected="selected">Any</option>
+            </select>
+          </div>
+          <div class="container-model">
+            <p>Model</p>
+            <select class="select-model">
+              <option value="any" selected="selected">Any</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="main-data-category">
+        <div class="filter-category-name" (click)="expandFunction('main')">
+          <p>Main data <span class="fa fa-arrow-up" *ngIf="expandMain"></span> <span class="fa fa-arrow-down"
+              *ngIf="!expandMain"></span></p>
+        </div>
+        <div class="price-power-mileage" [ngClass]="{'restrict': !expandMain}">
+          <div class="container-price">
+            <p>Price</p>
+            <div class="price-slider">
+              <ng5-slider [(value)]="verticalSlider.minValue" [(highValue)]="verticalSlider.maxValue"
+                [options]="verticalSlider.options"></ng5-slider>
+            </div>
+          </div>
+          <div class="container-power">
+            <p>Power</p>
+            <div class="power-values">
+              <div class="power-from">
+                <select class="select-power-from">
+                  <option hidden value="">From</option>
+                </select>
+              </div>
+              <div class="power-to">
+                <select class="select-power-to">
+                  <option hidden value="">To</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="engine-category">
+        <div class="filter-category-name" (click)="expandFunction('engine')">
+          <p>Engine <span class="fa fa-arrow-up" *ngIf="expandEngine"></span> <span class="fa fa-arrow-down"
+              *ngIf="!expandEngine"></span></p>
+        </div>
+        <div class="fuel-gearbox" [ngClass]="{'restrict': !expandEngine}">
+          <div class="container-fuel">
+            <p>Fuel type</p>
+            <div class="all-types">
+              <div class="fuel-type">
+                <label class="checkModel" *ngFor="let fuel of fuelType">{{fuel.text}}
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-gearbox">
+            <p>Gearbox</p>
+            <div class="all-types">
+              <div class="gearbox-type">
+                <label class="checkModel" *ngFor="let gearbox of gearboxType">{{gearbox.text}}
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="container-cubic">
+            <p>Cubic Capacity (in cm³)</p>
+            <div class="power-values">
+              <div class="cubic-from">
+                <select class="select-cubic-from">
+                  <option hidden value="">From</option>
+                </select>
+              </div>
+              <div class="cubic-to">
+                <select class="select-cubic-to">
+                  <option hidden value="">To</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="environment-category">
+        <div class="filter-category-name" (click)="expandFunction('environment')">
+          <p>Environment <span class="fa fa-arrow-up" *ngIf="expandEnvironment"></span> <span class="fa fa-arrow-down"
+              *ngIf="!expandEnvironment"></span></p>
+        </div>
+        <div class="container-consumption" [ngClass]="{'restrict': !expandEnvironment}">
+          <p>Fuel consumption</p>
+          <div>
+            <select class="select-consumption">
+              <option value="any">Any</option>
+              <option *ngFor="let consumption of consumptionType">{{consumption.text}} l/100km</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

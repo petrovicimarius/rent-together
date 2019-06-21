@@ -4,27 +4,39 @@
   <span></span>
   <span></span>
   <div class="side-navbar" id="menu">
-    <img routerLink="" class="brand" src="./../../../../assets/logo.png">
+    <img routerLink="" class="brand" src="./../../../../assets/logo-inactive.png">
     <div class="routes">
       <ul>
-        <div class="users-container" routerLink="users" (click)="onClick('users')"
-          routerLinkActive="users-active-route">
-          <li class="users-logo" routerLink="users" (click)="onClick('users')" routerLinkActive="users-logo-active">
+        <div class="login-container" routerLink="login" (click)="onClick('login')"
+          routerLinkActive="login-active-route">
+          <li class="login-logo fa fa-sign-in-alt" routerLink="login" (click)="onClick('login')"
+            routerLinkActive="login-logo-active">
           </li>
-          <a routerLink="users" (click)="onClick('users')" routerLinkActive="active">Users</a>
+          <a routerLink="login" (click)="onClick('login')" routerLinkActive="active">Log in</a>
         </div>
-        <div class="assets-container" routerLink="assets" (click)="onClick('assets')"
-          routerLinkActive="assets-active-route">
-          <li class="assets-logo" routerLink="assets" (click)="onClick('assets')" routerLinkActive="assets-logo-active">
+
+        <div class="dashboard-container" routerLink="dashboard" (click)="onClick('dashboard')"
+          routerLinkActive="dashboard-active-route">
+          <li class="dashboard-logo fa fa-th-list" routerLink="dashboard" (click)="onClick('dashboard')"
+            routerLinkActive="dashboard-logo-active">
           </li>
-          <a routerLink="assets" (click)="onClick('assets')" routerLinkActive="active">Assets</a>
+          <a routerLink="dashboard" (click)="onClick('dashboard')" routerLinkActive="active">Dashboard</a>
         </div>
-        <div class="entities-container" routerLink="entities" (click)="onClick('entities')"
-          routerLinkActive="entities-active-route">
-          <li class="entities-logo" routerLink="entities" (click)="onClick('entities')"
-            routerLinkActive="entities-logo-active">
+
+        <div class="search-container" routerLink="search" (click)="onClick('search')"
+          routerLinkActive="search-active-route">
+          <li class="search-logo fa fa-search" routerLink="search" (click)="onClick('search')"
+            routerLinkActive="search-logo-active">
           </li>
-          <a routerLink="entities" (click)="onClick('entities')" routerLinkActive="active">Entities</a>
+          <a routerLink="search" (click)="onClick('search')" routerLinkActive="active">Deep search</a>
+        </div>
+
+        <div class="profile-container" routerLink="profile" (click)="onClick('profile')"
+          routerLinkActive="profile-active-route">
+          <li class="profile-logo fa fa-user-alt" routerLink="profile" (click)="onClick('profile')"
+            routerLinkActive="profile-logo-active">
+          </li>
+          <a routerLink="profile" (click)="onClick('profile')" routerLinkActive="active">Profile</a>
         </div>
       </ul>
     </div>

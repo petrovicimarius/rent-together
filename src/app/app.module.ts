@@ -26,6 +26,7 @@ import { PostService } from './services/post-service';
 import { Ng5SliderModule } from 'ng5-slider';
 import { RatingModule } from "ngx-rating";
 import { AgmCoreModule } from '@agm/core';
+import { SearchComponent } from './components/shared/search/search.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AgmCoreModule } from '@agm/core';
     AnnouncementsComponent,
     RatingComponent,
     SideMenuComponent,
-    TopBarComponent
+    TopBarComponent,
+    SearchComponent
   ],
   imports: [
     FormsModule,

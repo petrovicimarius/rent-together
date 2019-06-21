@@ -7,6 +7,7 @@
     float: left;
     position: fixed;
     background: $background-color;
+    top: 0;
 }
 
 .side-navbar a img {
@@ -15,11 +16,16 @@
 }
 
 .brand {
-    padding-top: 17px;
+    padding-top: 30px;
     margin: 0 auto;
     display: flex;
     cursor: pointer;
     outline: none;
+    width: 80px;
+}
+
+.brand:hover {
+    content: url('./../../../../assets/logo-active.png');
 }
 
 .routes {
@@ -38,20 +44,26 @@
 }
 
 .active {
-    color: $primary-dark-blue !important;
+    color: $purple !important;
 }
 
-.users-active-route,
-.assets-active-route,
-.entities-active-route,
-.history-active-route {
-    border-right: 4px solid $primary-dark-blue !important;
+.dashboard-logo-active,
+.search-logo-active,
+.profile-logo-active .login-logo-active {
+    color: $purple !important;
 }
 
-.users-container a,
-.assets-container a,
-.entities-container a,
-.history-container a {
+.dashboard-active-route,
+.search-active-route,
+.profile-active-route,
+.login-active-route {
+    border-right: 4px solid $purple !important;
+}
+
+.dashboard-container a,
+.search-container a,
+.profile-container a,
+.login-container a {
     font-family: Rubik;
     font-style: normal;
     font-weight: normal;
@@ -59,74 +71,85 @@
     font-size: $font-size-16;
 }
 
-.users-container,
-.assets-container,
-.entities-container,
-.history-container {
+.dashboard-container,
+.search-container,
+.profile-container,
+.login-container {
     width: 100%;
     margin-bottom: 50px;
     outline: none;
     cursor: pointer;
     border-right: 4px solid transparent;
+    display: grid;
+    max-width: 100px;
 }
 
-.users-container a,
-.assets-container a,
-.entities-container a,
-.history-container a {
+.dashboard-container a,
+.search-container a,
+.profile-container a,
+.login-container a {
     color: $secondary-color;
     text-decoration: none;
 }
 
-.users-container:hover a,
-.assets-container:hover a,
-.entities-container:hover a,
-.history-container:hover a {
-    color: $primary-dark-blue;
+.dashboard-container:hover a,
+.search-container:hover a,
+.profile-container:hover a,
+.login-container:hover a {
+    color: $purple;
 }
 
-.users-container:hover,
-.assets-container:hover,
-.entities-container:hover,
-.history-container:hover {
-    border-right: 4px solid $primary-dark-blue;
+.dashboard-container:hover,
+.search-container:hover,
+.profile-container:hover,
+.login-container:hover {
+    border-right: 4px solid $purple;
 }
 
-.users-logo,
-.assets-logo,
-.entities-logo,
-.history-logo {
+
+
+.dashboard-logo,
+.search-logo,
+.profile-logo,
+.login-logo {
     margin: 0 auto;
-    width: 30px;
-    height: 30px;
     outline: none;
+    font-size: 25px;
+    color: $secondary-color;
 }
 
-.users-logo {
-    // background: $url-common $users-of;
+.dashboard-container:hover .dashboard-logo,
+.search-container:hover .search-logo,
+.profile-container:hover .profile-logo,
+.login-container:hover .login-logo {
+    color: $purple;
 }
 
-.assets-logo {
-    // background: $url-common $assets-of;
+.dashboard-logo {
+    // background: $url-common $dashboard-of;
 }
 
-.entities-logo {
-    // background: $url-common $entities-of;
+.search-logo {
+    // background: $url-common $search-of;
 }
 
-.entities-container:hover .entities-logo,
-.entities-logo-active {
-    // background: $url-common $entities-on;
+.profile-logo {
+    // background: $url-common $profile-of;
 }
 
-.assets-container:hover .assets-logo,
-.assets-logo-active {
-    // background: $url-common $assets-on;
+.profile-container:hover .profile-logo,
+.profile-logo-active {
+    // background: $url-common $profile-on;
 }
 
-.users-container:hover .users-logo,
-.users-logo-active {
-    // background: $url-common $users-on;
+.search-container:hover .search-logo,
+.search-logo-active {
+    // background: $url-common $search-on;
+}
+
+.dashboard-container:hover .dashboard-logo,
+.dashboard-logo-active {
+    // background: $url-common $dashboard-on;
 }
 
 #menuToggle input,
@@ -135,6 +158,11 @@
 }
 
 @media screen and (max-width: 500px) {
+
+    .brand {
+        margin-top: 50px;
+    }
+
     #menuToggle {
         display: block;
         position: fixed;
@@ -164,7 +192,7 @@
         height: 4px;
         margin-bottom: 5px;
         position: relative;
-        background: #C7C9CC;
+        background: $secondary-color;
         border-radius: 3px;
         z-index: 3;
         transform-origin: 4px 0px;
@@ -184,7 +212,7 @@
     #menuToggle input:checked~span {
         opacity: 1;
         transform: rotate(45deg) translate(-2px, -1px);
-        background: $primary-dark-blue;
+        background: $purple;
     }
 
     #menuToggle input:checked~span:nth-last-child(3) {
@@ -208,18 +236,10 @@
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
     }
 
-    .side-navbar {
-        margin-top: 20px;
-    }
-
-    .routes {
-        margin-top: 55px;
-    }
-
-    .users-container,
-    .assets-container,
-    .entities-container,
-    .history-container {
+    .dashboard-container,
+    .search-container,
+    .profile-container,
+    .login-container {
         margin-bottom: 20px;
     }
 }

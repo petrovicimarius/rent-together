@@ -10,31 +10,16 @@
           <mat-error>Full name cannot be empty</mat-error>
         </mat-form-field>
       </div>
+
       <div class="user-edit__input-body">
-        <label>Position</label>
-        <mat-form-field>
-          <input matInput name="position" [(ngModel)]="userData.position" class="login__usr-input ocr-input" required>
-          <mat-label>Position</mat-label>
-          <mat-error>Position cannot be empty</mat-error>
-        </mat-form-field>
-      </div>
-      <div class="user-edit__input-body">
-        <label>Department</label>
-        <mat-form-field>
-          <input matInput name="department" [(ngModel)]="userData.department" class="login__usr-input ocr-input"
-            required>
-          <mat-label>Department</mat-label>
-          <mat-error>Department cannot be empty</mat-error>
-        </mat-form-field>
-      </div>
-      <div class="user-edit__input-body">
-        <label>Email adress</label>
+        <label>Email</label>
         <mat-form-field>
           <input matInput [(ngModel)]="userData.email" name="email" class="login__usr-input ocr-input" required>
-          <mat-label>Email adress</mat-label>
+          <mat-label>Email</mat-label>
           <mat-error>Email cannot be empty</mat-error>
         </mat-form-field>
       </div>
+
       <div class="user-edit__input-body">
         <label>Phone</label>
         <mat-form-field>
@@ -44,6 +29,25 @@
           <mat-error>Phone cannot be empty</mat-error>
         </mat-form-field>
       </div>
+
+      <div class="user-edit__input-body">
+        <label>Location</label>
+        <mat-form-field>
+          <input matInput name="location" [(ngModel)]="userData.location" class="login__usr-input ocr-input" required>
+          <mat-label>Location</mat-label>
+          <mat-error>Location cannot be empty</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <button class="location" (click)="getLocation()">Try It</button>
+        <p id="demo">aaaaa: {{position}}
+        </p>
+      </div>
+      <!-- <div>asaaa
+        <agm-map [latitude]="coordinates.latitude" [longitude]="coordinates.longitude" [zoom]="10">
+        </agm-map>
+      </div> -->
+
     </form>
     <div class="user-edit__card">
       <div>Profile picture</div>
@@ -66,7 +70,8 @@
     </div>
   </div>
   <div class="user-edit__actions">
-    <button [disabled]="profile.invalid">Save</button>
+    <button>Save</button>
+    <!-- <button [disabled]="profile.invalid">Save</button> -->
     <button>Cancel</button>
   </div>
 </section>

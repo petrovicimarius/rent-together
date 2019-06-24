@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,7 @@ import { MaterialModule } from './material-module';
 import { SideMenuComponent } from './components/shared/side-menu/side-menu.component';
 import { TopBarComponent } from './components/shared/top-bar/top-bar.component';
 import { PostService } from './services/post-service';
+// import { GeoLocationService } from './services/geo-location-service';
 
 import { Ng5SliderModule } from 'ng5-slider';
 import { RatingModule } from "ngx-rating";
@@ -69,6 +70,10 @@ import { SearchComponent } from './components/shared/search/search.component';
     // DatePipe,
     // AuthGuard,
     AuthService,
+    // GeoLocationService,
+  ],
+  schemas: [
+    NO_ERRORS_SCHEMA,
   ],
   bootstrap: [
     AppComponent

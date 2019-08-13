@@ -8,7 +8,13 @@
     </div>
   </div>
   <div class="content">
+    <div class="container-search-bar">
+
+    </div>
     <div class="filter">
+      <div class="deep-search">
+        <button (click)="redirectDeepSearch()">Deep search</button>
+      </div>
       <div class="container-mark">
         <p>Filter</p>
 
@@ -75,14 +81,17 @@
         <p>Content goes here... (fixed position)</p>
       </div>
     </div> -->
-    <div class="google-map">
+
+    <!-- Google map -->
+
+    <!-- <div class="google-map">
       <div class="container-map" [ngClass]="{'on-scroll-map': checkScroll}">
         <agm-map [zoom]="zoom" [latitude]="lat" [longitude]="lng">
           <agm-marker *ngFor="let point of mapPoints" [latitude]="point.lat" [longitude]="point.lng" [ngClass]="focus">
           </agm-marker>
         </agm-map>
       </div>
-    </div>
+    </div> -->
   </div>
 
 

@@ -48,20 +48,26 @@ export class DashboardComponent implements OnInit {
     { id: 2, text: 'Bmw' },
     { id: 3, text: 'Wolkswagen' },
     { id: 4, text: 'Skoda' },
-    { id: 5, text: 'Volvo' }
+    { id: 5, text: 'Volvo' },
+    { id: 6, text: 'Seat' },
+    { id: 7, text: 'Fiat' },
+    { id: 8, text: 'Hyundai' },
+    { id: 9, text: 'Mitubishi' },
+    { id: 10, text: 'Mercedes' },
+
   ];
   public announcementExample: Array<Object> = [
-    { id: 1, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m rentingt Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 2, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m rentingt Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 3, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m rentingt Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 4, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m rentingt Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 5, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m rentingt Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 6, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m rentingt Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 7, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m rentingt Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 8, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m rentingt Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 9, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m rentingt Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 10, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m rentingt Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 11, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m rentingt Audi A4 for one day.', rating: 4, phone: '0753637600' }
+    { id: 1, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 2, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 3, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 4, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 5, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 6, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 7, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 8, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 9, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 10, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 11, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' }
   ];
 
   public mapPoints: Array<Object> = [
@@ -89,6 +95,10 @@ export class DashboardComponent implements OnInit {
       });
       console.log("ids: ", this.ids, ' || data: ', this.announcements);
     });
+  }
+
+  redirectDeepSearch() {
+    // this.router.('/search');
   }
 
   @HostListener("window:scroll", [])

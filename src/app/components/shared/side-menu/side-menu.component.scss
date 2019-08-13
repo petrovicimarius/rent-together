@@ -1,109 +1,110 @@
 @import './../../../../styles-shared.scss';
 
 .side-navbar {
-    height: 100%;
-    width: 103px;
-    border-right: 1px solid $border-expand;
-    float: left;
-    position: fixed;
-    background: $background-color;
-    top: 0;
+  height: 100%;
+  width: 103px;
+  border-right: 1px solid $border-expand;
+  float: left;
+  position: fixed;
+  background: $background-color;
+  top: 0;
 }
 
 .side-navbar a img {
-    display: flex;
-    margin: 0 auto;
+  display: flex;
+  margin: 0 auto;
 }
 
 .brand {
-    padding-top: 30px;
-    margin: 0 auto;
-    display: flex;
-    cursor: pointer;
-    outline: none;
-    width: 80px;
+  padding-top: 30px;
+  margin: 0 auto;
+  display: flex;
+  cursor: pointer;
+  outline: none;
+  width: 80px;
 }
 
 .brand:hover {
-    content: url('./../../../../assets/logo-active.png');
+  content: url('./../../../../assets/logo-active.png');
 }
 
 .routes {
-    width: 100%;
-    text-align: center;
-    vertical-align: middle;
-    margin-top: 220px;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 220px;
 }
 
 .routes ul,
 .side-navbar ul {
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
 }
 
 .active {
-    color: $purple !important;
+  color: $purple !important;
 }
 
 .dashboard-logo-active,
 .search-logo-active,
 .profile-logo-active .login-logo-active {
-    color: $purple !important;
+  color: $purple !important;
 }
 
 .dashboard-active-route,
 .search-active-route,
 .profile-active-route,
 .login-active-route {
-    border-right: 4px solid $purple !important;
+  border-right: 4px solid $purple !important;
 }
 
 .dashboard-container a,
 .search-container a,
 .profile-container a,
 .login-container a {
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 23px;
-    font-size: $font-size-16;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 23px;
+  font-size: $font-size-16;
 }
 
 .dashboard-container,
 .search-container,
 .profile-container,
 .login-container {
-    width: 100%;
-    margin-bottom: 50px;
-    outline: none;
-    cursor: pointer;
-    border-right: 4px solid transparent;
-    display: grid;
-    max-width: 100px;
+  width: 100%;
+  margin-bottom: 50px;
+  outline: none;
+  cursor: pointer;
+  border-right: 4px solid transparent;
+  display: grid;
+  max-width: 100px;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out;
 }
 
 .dashboard-container a,
 .search-container a,
 .profile-container a,
 .login-container a {
-    color: $secondary-color;
-    text-decoration: none;
+  color: $secondary-color;
+  text-decoration: none;
 }
 
 .dashboard-container:hover a,
 .search-container:hover a,
 .profile-container:hover a,
 .login-container:hover a {
-    color: $purple;
+  color: $purple;
 }
 
 .dashboard-container:hover,
 .search-container:hover,
 .profile-container:hover,
 .login-container:hover {
-    border-right: 4px solid $purple;
+  border-right: 4px solid $purple;
 }
 
 
@@ -112,134 +113,107 @@
 .search-logo,
 .profile-logo,
 .login-logo {
-    margin: 0 auto;
-    outline: none;
-    font-size: 25px;
-    color: $secondary-color;
+  margin: 0 auto;
+  outline: none;
+  font-size: 25px;
+  color: $secondary-color;
 }
 
 .dashboard-container:hover .dashboard-logo,
 .search-container:hover .search-logo,
 .profile-container:hover .profile-logo,
 .login-container:hover .login-logo {
-    color: $purple;
-}
-
-.dashboard-logo {
-    // background: $url-common $dashboard-of;
-}
-
-.search-logo {
-    // background: $url-common $search-of;
-}
-
-.profile-logo {
-    // background: $url-common $profile-of;
-}
-
-.profile-container:hover .profile-logo,
-.profile-logo-active {
-    // background: $url-common $profile-on;
-}
-
-.search-container:hover .search-logo,
-.search-logo-active {
-    // background: $url-common $search-on;
-}
-
-.dashboard-container:hover .dashboard-logo,
-.dashboard-logo-active {
-    // background: $url-common $dashboard-on;
+  color: $purple;
 }
 
 #menuToggle input,
 #menuToggle span {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 500px) {
 
-    .brand {
-        margin-top: 50px;
-    }
+  .brand {
+    margin-top: 50px;
+  }
 
-    #menuToggle {
-        display: block;
-        position: fixed;
-        top: 30px;
-        left: 40px;
-        z-index: 3;
-        -webkit-user-select: none;
-        user-select: none;
-    }
+  #menuToggle {
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    z-index: 3;
+    -webkit-user-select: none;
+    user-select: none;
+  }
 
-    #menuToggle input {
-        display: block;
-        width: 40px;
-        height: 32px;
-        position: absolute;
-        top: -7px;
-        left: -5px;
-        cursor: pointer;
-        opacity: 0;
-        z-index: 4;
-        -webkit-touch-callout: none;
-    }
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 4;
+    -webkit-touch-callout: none;
+  }
 
-    #menuToggle span {
-        display: block;
-        width: 33px;
-        height: 4px;
-        margin-bottom: 5px;
-        position: relative;
-        background: $secondary-color;
-        border-radius: 3px;
-        z-index: 3;
-        transform-origin: 4px 0px;
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-            opacity 0.55s ease;
-    }
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: $secondary-color;
+    border-radius: 3px;
+    z-index: 3;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+  }
 
-    #menuToggle span:first-child {
-        transform-origin: 0% 0%;
-    }
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
 
-    #menuToggle span:nth-last-child(2) {
-        transform-origin: 0% 100%;
-    }
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
 
-    #menuToggle input:checked~span {
-        opacity: 1;
-        transform: rotate(45deg) translate(-2px, -1px);
-        background: $purple;
-    }
+  #menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: $purple;
+  }
 
-    #menuToggle input:checked~span:nth-last-child(3) {
-        opacity: 0;
-        transform: rotate(0deg) scale(0.2, 0.2);
-    }
+  #menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
 
-    #menuToggle input:checked~span:nth-last-child(2) {
-        transform: rotate(-45deg) translate(0, -1px);
-    }
+  #menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
 
-    #menuToggle input:checked~#menu {
-        transform: none;
-    }
+  #menuToggle input:checked~#menu {
+    transform: none;
+  }
 
-    #menu {
-        margin-left: -40px;
-        -webkit-font-smoothing: antialiased;
-        transform-origin: 0% 0%;
-        transform: translate(-100%, 0);
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-    }
+  #menu {
+    margin-left: -40px;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
 
-    .dashboard-container,
-    .search-container,
-    .profile-container,
-    .login-container {
-        margin-bottom: 20px;
-    }
+  .dashboard-container,
+  .search-container,
+  .profile-container,
+  .login-container {
+    margin-bottom: 20px;
+  }
 }

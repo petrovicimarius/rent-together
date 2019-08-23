@@ -25,9 +25,11 @@ import { PostService } from './services/post-service';
 // import { GeoLocationService } from './services/geo-location-service';
 
 import { Ng5SliderModule } from 'ng5-slider';
+import { SliderModule } from 'angular-image-slider';
 import { RatingModule } from "ngx-rating";
 import { AgmCoreModule } from '@agm/core';
 import { SearchComponent } from './components/shared/search/search.component';
+import { AnnouncementComponent } from './components/shared/announcement/announcement.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { SearchComponent } from './components/shared/search/search.component';
     RatingComponent,
     SideMenuComponent,
     TopBarComponent,
-    SearchComponent
+    SearchComponent,
+    AnnouncementComponent
   ],
   imports: [
     FormsModule,
@@ -57,6 +60,7 @@ import { SearchComponent } from './components/shared/search/search.component';
     BrowserAnimationsModule,
     Ng5SliderModule,
     RatingModule,
+    SliderModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyAqcFHBPQuY6E-Fd5mn9DKlks8tHhHHewM"
     }),

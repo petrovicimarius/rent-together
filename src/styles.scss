@@ -2,5 +2,26 @@
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 body {
-    margin: 0;
+  margin: 0;
+}
+
+#grid {
+  grid-template-columns: repeat(1, 1fr) !important;
+}
+
+#container {
+  max-width: 600px !important;
+  margin: 0 auto;
+}
+
+.star-icon {
+  color: grey !important;
+
+  :before {
+    color: red !important;
+  }
+
+  :hover {
+    color: purple !important;
+  }
 }

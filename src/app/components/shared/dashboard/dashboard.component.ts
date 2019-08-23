@@ -13,6 +13,7 @@ interface RangeSliderModel {
 interface typeModel {
   id: number;
   text: string;
+  models?: any;
 }
 
 @Component({
@@ -22,7 +23,7 @@ interface typeModel {
 })
 export class DashboardComponent implements OnInit {
 
-  markState: boolean = false;
+  markId: number;
   bmwMarkState: boolean = false;
   checkScroll: boolean = false;
   public lat = 46.128620;
@@ -43,11 +44,19 @@ export class DashboardComponent implements OnInit {
     { id: 4, text: 'A4' },
     { id: 5, text: 'A5' }
   ];
+
+  public fuelTypes: typeModel[] = [
+    { id: 1, text: 'Diesel' },
+    { id: 2, text: 'Petrol' },
+    { id: 3, text: 'Electric' },
+    { id: 4, text: 'Hybrid' }
+  ]
+
   public markExample: typeModel[] = [
-    { id: 1, text: 'Audi' },
-    { id: 2, text: 'Bmw' },
-    { id: 3, text: 'Wolkswagen' },
-    { id: 4, text: 'Skoda' },
+    { id: 1, text: 'Audi', models: ['A1', 'A2', 'A3', 'A4', 'A4 allroad', 'A5', 'A6', 'A7', 'A8'] },
+    { id: 2, text: 'Bmw', models: ['Seria 1', 'Seria 2', 'Seria 3', 'Seria 4', 'Seria 5', 'Seria 6', 'Seria 7', 'Seria 8', 'X1', 'X2', 'X3', 'X4', 'X5', 'X6', 'X7'] },
+    { id: 3, text: 'Wolkswagen', models: ['Golf', 'Touran', 'Polo', 'Tuareg', 'Tiguan', 'Passat', 'Arteon', 'Arteon', 'Comercials'] },
+    { id: 4, text: 'Skoda', models: ['Fabia', 'Octavia', 'Karoq', 'Kodiaq', 'Scala'] },
     { id: 5, text: 'Volvo' },
     { id: 6, text: 'Seat' },
     { id: 7, text: 'Fiat' },
@@ -98,7 +107,7 @@ export class DashboardComponent implements OnInit {
   }
 
   redirectDeepSearch() {
-    // this.router.('/search');
+    this.router.navigate(['/search']);
   }
 
   @HostListener("window:scroll", [])
@@ -125,17 +134,13 @@ export class DashboardComponent implements OnInit {
   }
 
 
-  toggleMarkState(mark): void {
-    if (this.markState && mark == 'Audi') {
-      this.markState = false;
-    } else {
-      this.markState = true;
-    }
+  toggleMarkState(id): void {
+    this.markId = id;
   }
 
-  redirectTo(id: number): void {
-    console.log("ID: " + id);
-    this.router.navigate(['/id']);
+  redirectTo(id): void {
+    console.log("Item: " + id);
+    this.router.navigate(['announcement/', id]);
   }
 
   convertAddress(address) {

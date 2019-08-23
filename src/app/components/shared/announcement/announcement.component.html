@@ -1,0 +1,47 @@
+<div class="announcement-page">
+  <div class="back-btn">
+    <button (click)=redirectTo()>Back to search results</button>
+  </div>
+  <div class="container">
+    <div class="announcement-header">
+      <div class="title">
+        <h1>Audi a6</h1>
+      </div>
+
+      <div class="price">
+        <h2>30$</h2>
+      </div>
+    </div>
+    <div class="slider-show">
+      <angular-image-slider [images]="imagesUrl"></angular-image-slider>
+    </div>
+    <div class="info">
+      <div class="converted-price">
+        {{convertedPrice}}
+        <select (change)="convertCurrency($event.target.value)">
+          <option *ngFor="let type of currency">
+            {{type}}
+          </option>
+        </select>
+
+      </div>
+      <div class="tehnical-data">
+        Condition
+      </div>
+    </div>
+    <div class="extra-info">
+      <textarea></textarea>
+    </div>
+  </div>
+  <div class="location">
+    <div class="phone">
+
+    </div>
+    <div class="rating">
+
+    </div>
+    <div class="map">
+
+    </div>
+  </div>
+</div>

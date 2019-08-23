@@ -5,7 +5,7 @@ import { RegisterComponent } from './components/shared/register/register.compone
 import { SecureInnerPagesGuard } from './services/auth-guard/guard/secure-inner-pages.guard';
 import { DashboardComponent } from './components/shared/dashboard/dashboard.component';
 import { AuthGuard } from './services/auth-guard/guard/auth.guard';
-import { AnnouncementsComponent } from './components/admin/announcements/announcements.component';
+import { AnnouncementComponent } from './components/shared/announcement/announcement.component';
 import { SearchComponent } from '@shared/search/search.component';
 import { ProfileComponent } from '@admin/profile/profile.component';
 
@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'announcements', component: AnnouncementsComponent },
+  { path: 'announcement/:id', component: AnnouncementComponent },
   { path: 'search', component: SearchComponent },
   { path: 'profile', component: ProfileComponent },
 

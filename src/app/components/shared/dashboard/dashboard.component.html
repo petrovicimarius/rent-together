@@ -7,23 +7,24 @@
       </div>
     </div>
   </div>
-  <div class="content">
+  <div class="search-content">
     <div class="container-search-bar">
-
+      <button (click)="redirectDeepSearch()">Deep search</button>
+      <input type="search">
     </div>
+  </div>
+  <div class="content">
     <div class="filter">
-      <div class="deep-search">
-        <button (click)="redirectDeepSearch()">Deep search</button>
-      </div>
-      <div class="container-mark">
+
+      <!-- <div class="container-mark">
         <p>Filter</p>
 
         <div class="all-marks" *ngFor="let mark of markExample">
-          <button class="marks" (click)="toggleMarkState(mark.text)">{{mark.text}}</button>
-          <div class="mark-model" *ngIf="markState">
-            <label class="checkModel" *ngFor="let model of modelExample">{{model.text}}
+          <button class="marks" (click)="toggleMarkState(mark.id)">{{mark.text}}</button>
+          <div class="mark-model" *ngIf="mark.id === markId">
+            <label class="checkModel" *ngFor="let model of mark.models">{{model}}
               <input type="checkbox">
-              <span class="checkmark"></span>
+              <span class="checkmark">{}</span>
             </label>
           </div>
         </div>
@@ -31,8 +32,9 @@
       <div class="container-fuel">
         <p>Fuel</p>
         <div class="fuel-type">
-          <input type="checkbox" name="diesel" value="diesel">Diesel<br>
-          <input type="checkbox" name="petrol" value="petrol">Petrol<br>
+          <label *ngFor="let fuel of fuelTypes">
+            <input type="checkbox" name="diesel" value="diesel"> {{fuel.text}}
+          </label>
         </div>
       </div>
       <div class="container-price">
@@ -41,13 +43,13 @@
           <ng5-slider [(value)]="verticalSlider.minValue" [(highValue)]="verticalSlider.maxValue"
             [options]="verticalSlider.options"></ng5-slider>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="container-announcements">
       <div class="container-announcement" *ngFor="let item of announcementExample" (mouseenter)="focusPoint(true)"
         (mouseleave)="focusPoint(false)">
         <div class="announcement">
-          <div (click)="redirectTo(item.id)" style="display: flex">
+          <div (click)="redirectTo(item.id)" class="announcement-info">
             <div class="announcement-front-image">
               <img class="front-image" src="./assets/fundal1.jpeg">
             </div>
@@ -62,14 +64,14 @@
           </div>
           <div class="container-rating-save-call">
             <div class="rating-save-call">
-              <rating [max]="5" class="fa-star" step="0.5" fullIcon="★" emptyIcon="☆" [float]="true"
-                [titles]="['one', 'two', 'three', 'four', 'five']"></rating>
-            </div>
-            <div class="rating-save-call">
               <button class="fa fa-phone-square"></button>
             </div>
             <div class="rating-save-call">
-              <button class="fa fa-bookmark-o"></button>
+              <button class="fa fa-bookmark"></button>
+            </div>
+            <div class="rating-save-call">
+              <rating [max]="5" class="fa-star" step="0.5" fullIcon="★" emptyIcon="☆" [float]="true"
+                [titles]="['one', 'two', 'three', 'four', 'five']"></rating>
             </div>
           </div>
         </div>

@@ -1,5 +1,7 @@
 @import './../../../../styles-shared.scss';
 
+$main-purple: #673ab7;
+
 * {
   transition: background-color 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out;
 }
@@ -24,6 +26,36 @@
   width: 100%;
   top: 0;
   z-index: -1;
+}
+
+.search-content {
+  padding: 0 15px 0 15px;
+}
+
+.container-search-bar {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  input {
+    max-width: 600px;
+    width: 100%;
+    float: right;
+    height: 30px;
+    padding: 0 15px 0 15px;
+  }
+
+  button {
+    height: 30px;
+    border: 1px solid $main-purple;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out;
+  }
+
+  button:hover {
+    color: white;
+    background: $main-purple;
+  }
 }
 
 .container-slogan {
@@ -53,10 +85,21 @@
 .announcement {
   display: flex;
   /* border: 1px solid red; */
-  padding-left: 20px;
-  padding-right: 21px;
   margin-top: 15px;
   margin-bottom: 15px;
+
+  .announcement-info {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+  }
+}
+
+.container-announcements {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 15px 0 15px;
 }
 
 .container-announcement:hover {
@@ -68,7 +111,6 @@
 .container-announcement {
   border-bottom: 1px dotted grey;
   border-top: 1px solid transparent;
-  border-right: 1px solid grey;
 }
 
 .announcement-front-image {
@@ -84,7 +126,8 @@
 }
 
 .name-description {
-  width: 350px;
+  width: 100%;
+  padding-right: 20px;
   margin-left: 10px;
   border-right: 1px solid #8f8f8f;
 }
@@ -101,24 +144,34 @@
 }
 
 .container-rating-save-call {
-  /* border: 1px solid red; */
-  margin-left: 20px;
-  width: 100px;
+  margin: 0 auto;
 }
 
 .rating-save-call {
   width: 100%;
   margin-top: 5px;
   text-align: center;
+  height: 30px;
+
+  .fa-bookmark {
+    height: 30px;
+    width: 25px;
+    border: 1px solid lightgray;
+    background: transparent;
+  }
+
+  .fa-bookmark:hover {
+    border: 1px solid $main-purple
+  }
 }
 
-.filter {
-  /* border: 1px solid red; */
-  border-right: 1px solid #8f8f8f;
-  border-left: 1px solid #8f8f8f;
-  width: 200px;
-  min-height: 800px;
-}
+// .filter {
+//   /* border: 1px solid red; */
+//   border-right: 1px solid #8f8f8f;
+//   border-left: 1px solid #8f8f8f;
+//   width: 200px;
+//   min-height: 800px;
+// }
 
 .container-mark {
   width: 170px;

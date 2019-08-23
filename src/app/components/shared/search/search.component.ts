@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Options, LabelType } from 'ng5-slider';
 
 interface RangeSliderModel {
@@ -54,7 +55,7 @@ export class SearchComponent implements OnInit {
     { id: 10, text: 15 },
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -81,6 +82,11 @@ export class SearchComponent implements OnInit {
       this.expandEnvironment = true;
     }
   }
+
+  redirectTo() {
+    this.router.navigate(['/dashboard']);
+  }
+
   verticalSlider: RangeSliderModel = {
     minValue: 0,
     maxValue: 0,

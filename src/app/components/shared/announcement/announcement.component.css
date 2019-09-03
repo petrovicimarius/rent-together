@@ -1,13 +1,12 @@
 * {
-  transition: background-color 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out,
+    border-color 0.25s ease-out;
 }
-
 .announcement-page {
   padding-left: 103px;
   margin: 0 auto;
   margin-top: 100px;
 }
-
 .back-btn,
 .container,
 .location {
@@ -16,46 +15,35 @@
   margin: 0 auto;
   padding: 0 30px 0 30px;
 }
-
 .back-btn button {
   height: 30px;
   border: 1px solid grey;
-
-  :hover {
-    border: 1px solid red;
-  }
 }
-
+.back-btn button :hover {
+  border: 1px solid red;
+}
 .announcement-header {
   height: 60px;
   border-bottom: 1px solid grey;
-
-  .title {
-    float: left;
-  }
-
-  .price {
-    float: right;
-  }
 }
-
+.announcement-header .title {
+  float: left;
+}
+.announcement-header .price {
+  float: right;
+}
 .slider-show {
   margin-top: 30px;
 }
-
-.extra-info {
-  textarea {
-    width: 100%;
-    padding: 0 15px 0 15px;
-    height: 100px;
-  }
+.extra-info textarea {
+  width: 100%;
+  padding: 0 15px 0 15px;
+  height: 100px;
 }
-
 .tehnical-data {
   max-width: 400px;
   display: grid;
 }
-
 .mark,
 .model,
 .year,
@@ -65,7 +53,6 @@
 .consumption {
   width: 100%;
 }
-
 .mark span:last-child,
 .model span:last-child,
 .year span:last-child,
@@ -75,7 +62,6 @@
 .consumption span:last-child {
   float: right;
 }
-
 .mark span:first-child,
 .model span:first-child,
 .year span:first-child,
@@ -85,7 +71,6 @@
 .consumption span:first-child {
   float: left;
 }
-
 @media screen and (max-width: 600px) {
   .announcement-page {
     padding-left: 0;

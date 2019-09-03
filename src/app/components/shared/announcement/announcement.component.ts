@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { privateEncrypt } from 'crypto';
+
 @Component({
   selector: 'app-announcement',
   templateUrl: './announcement.component.html',
@@ -60,17 +60,18 @@ export class AnnouncementComponent implements OnInit {
     switch (type) {
       case 'RON':
         // this.convertedPrice = parseFloat((Math.round((this.price * 4.7) * 100) / 100).toFixed(2));
-        debugger;
-        this.convertedPrice = this.price * 4.73;
+        this.convertedPrice = parseFloat((this.price * 4.73).toFixed(2));
         break;
       case '$':
-        this.convertedPrice = this.price * 1.33;
+        this.convertedPrice = parseFloat((this.price * 1.33).toFixed(2));
+        // this.convertedPrice = this.price * 1.33;
         break;
       case '€':
         this.convertedPrice = this.price;
         break;
       case '£':
-        this.convertedPrice = this.price * 0.88;
+        this.convertedPrice = parseFloat((this.price * 0.88).toFixed(2));
+        // this.convertedPrice = this.price * 0.88;
         break;
       default:
         break;

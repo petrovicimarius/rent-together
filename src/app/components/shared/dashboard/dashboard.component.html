@@ -51,14 +51,25 @@
         <div class="announcement">
           <div (click)="redirectTo(item.id)" class="announcement-info">
             <div class="announcement-front-image">
-              <img class="front-image" src="./assets/fundal1.jpeg">
+              <img class="front-image" src="{{ item.img ? item.img : './../../../../../assets/default-car-img.png' }}">
             </div>
             <div class="name-description">
               <div class="announcement-name">
-                Audi A4
+                {{item.title}}
               </div>
-              <div class="announcement-description">
-                I`m renting Audi A4 for one day.
+              <div class=" announcement-description">
+                {{item.description}}
+              </div>
+            </div>
+            <div class="extra-info">
+              <div class="price">
+                <label>Price</label>
+                <span> {{item.price}} €</span>
+              </div>
+              <div class="availability">
+                <label>Available today</label>
+                <span class="fa fa-circle"
+                  [ngClass]="{'available' : item.current_availability === 'available', 'not-available' : item.current_availability === 'not'}"></span>
               </div>
             </div>
           </div>
@@ -70,8 +81,8 @@
               <button class="fa fa-bookmark"></button>
             </div>
             <div class="rating-save-call">
-              <rating [max]="5" class="fa-star" step="0.5" fullIcon="★" emptyIcon="☆" [float]="true"
-                [titles]="['one', 'two', 'three', 'four', 'five']"></rating>
+              <rating [(ngModel)]="item.rating" [max]="5" class="fa-star" step="0.5" fullIcon="★" emptyIcon="☆"
+                [float]="true" [readonly]="true" [titles]="['one', 'two', 'three', 'four', 'five']"></rating>
             </div>
           </div>
         </div>

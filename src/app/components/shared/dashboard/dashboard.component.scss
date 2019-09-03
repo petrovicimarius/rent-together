@@ -75,7 +75,6 @@ $main-purple: #673ab7;
 
 .content {
   /* border: 1px solid green; */
-  border-right: 1px solid #8f8f8f;
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
@@ -89,7 +88,7 @@ $main-purple: #673ab7;
   margin-bottom: 15px;
 
   .announcement-info {
-    max-width: 600px;
+    max-width: 650px;
     width: 100%;
     display: flex;
   }
@@ -123,23 +122,22 @@ $main-purple: #673ab7;
 .front-image {
   width: 120px;
   height: 120px;
+  background: transparent;
+  padding: 0px 10px 0 10px;
 }
 
 .name-description {
   width: 100%;
-  padding-right: 20px;
-  margin-left: 10px;
-  border-right: 1px solid #8f8f8f;
+  padding: 0 20px 0 20px;
 }
 
 .announcement-name {
-  /* border: 1px solid red; */
   margin-top: 10px;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .announcement-description {
-  /* border: 1px solid red; */
   margin-top: 10px;
 }
 
@@ -288,7 +286,40 @@ $main-purple: #673ab7;
   color: #50d37b;
 }
 
+.available {
+  color: green !important;
+}
 
+.not-available {
+  color: red !important;
+}
+
+.price label,
+.availability label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.availability span {
+  font-size: 16px;
+  color: orange;
+}
+
+.price,
+.availability {
+  display: grid;
+  text-align: center;
+}
+
+.price {
+  margin-bottom: 10px;
+}
+
+.extra-info {
+  padding: 0 10px 0 10px;
+  border-right: 1px solid #8f8f8f;
+  border-left: 1px solid #8f8f8f;
+}
 
 
 /* Check model of the car */

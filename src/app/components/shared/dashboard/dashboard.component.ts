@@ -66,17 +66,17 @@ export class DashboardComponent implements OnInit {
 
   ];
   public announcementExample: Array<Object> = [
-    { id: 1, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 2, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 3, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 4, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 5, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 6, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 7, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 8, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 9, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 10, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
-    { id: 11, img: './assets/fundal1.jpeg', title: 'Audi A4', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' }
+    { id: 1, img: './assets/car-contract.png', title: 'Audi A4', description: 'I`m renting asdasdasd A4 for one day.', price: 10, current_availability: 'available', rating: 1, phone: '0753637600' },
+    { id: 2, img: './assets/car-detailing.png', title: 'Audi 1', description: 'I`m reasdasdasdsansdtinag Audi A4 for one day.', price: 30, current_availability: 'available', rating: 4, phone: '0753637600' },
+    { id: 3, img: './assets/find2.png', title: 'Audi 24', description: 'I`masddddddddddddddddddddddddddddddddddd renting Audi A4 for one day.', current_availability: 'not', price: 50, rating: 5, phone: '0753637600' },
+    { id: 4, img: '', title: 'Audi 34', description: 'I`m rsssssssssssssssssssssssssssssenting Audi A4 for one day.', price: 45, current_availability: 'available', rating: 3, phone: '0753637600' },
+    { id: 5, img: './assets/fundal1.jpeg', title: 'Audi 44', description: 'I`m renting Audi A4 for one day.', price: 27, current_availability: 'not', rating: 4, phone: '0753637600' },
+    { id: 6, img: './assets/fundal1.jpeg', title: 'Audi A1124', description: 'I`m raaaaaaaaaaaaaaaaaaaaaaenting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 7, img: './assets/fundal1.jpeg', title: 'Audi A123124', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 8, img: './assets/fundal1.jpeg', title: 'Audi A1114', description: 'I`m renting Audi A4 for one day.', rating: 4, current_availability: 'available', phone: '0753637600' },
+    { id: 9, img: './assets/fundal1.jpeg', title: 'Audi ', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 10, img: './assets/fundal1.jpeg', title: 'Audi A1224', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' },
+    { id: 11, img: './assets/fundal1.jpeg', title: 'Audi 00', description: 'I`m renting Audi A4 for one day.', rating: 4, phone: '0753637600' }
   ];
 
   public mapPoints: Array<Object> = [

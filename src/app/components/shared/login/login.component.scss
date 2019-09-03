@@ -1,97 +1,108 @@
 @import './../../../../styles-shared.scss';
 
+.login-component {
+  margin-left: 103px;
+}
+
+.login-message {
+  text-align: center;
+  margin: 100px 0 100px 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
 .container {
-    border: 1px solid $purple;
-    max-width: 450px;
-    min-height: 280px;
-    margin: 0 auto;
-    border-radius: 5px;
+  border: 1px solid $purple;
+  max-width: 450px;
+  min-height: 280px;
+  margin: 0 auto;
+  border-radius: 5px;
 }
 
 mat-form-field {
-    width: 100%;
+  width: 100%;
 }
 
 .container-switch {
-    height: 50px;
-    width: 100%;
-    /* border: 1px solid red; */
-    display: flex;
-    color: White;
-    cursor: pointer;
+  height: 50px;
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  color: White;
+  cursor: pointer;
 }
 
 .switch-login,
 .switch-register {
-    width: 50%;
-    text-align: center;
-    height: 100%;
-    font-size: 20px;
-    background: $secondary-color;
-    border-bottom: 1px solid $purple;
+  width: 50%;
+  text-align: center;
+  height: 100%;
+  font-size: 20px;
+  background: $secondary-color;
+  border-bottom: 1px solid $purple;
 }
 
 .switch-login {
-    border-right: 1px solid $purple;
-    border-top-left-radius: 5px;
+  border-right: 1px solid $purple;
+  border-top-left-radius: 5px;
 }
 
 .switch-register {
-    border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .switch-login p,
 .switch-register p {
-    margin: 12px 0px 0px 0px;
+  margin: 12px 0px 0px 0px;
 }
 
 .switch-login label,
 .switch-register label {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .switch-focus {
-    background: white;
-    color: $purple;
-    border-bottom: none;
+  background: white;
+  color: $purple;
+  border-bottom: none;
 }
 
 .hide-container {
-    display: none;
+  display: none;
 }
 
 .container-login,
 .container-register {
-    width: 100%;
-    border-bottom: 1px solid $purple;
-    min-height: 250px;
-    padding-bottom: 50px;
+  width: 100%;
+  border-bottom: 1px solid $purple;
+  min-height: 250px;
+  padding-bottom: 50px;
 }
 
 .container-reset {
-    width: 100%;
-    height: 50px;
+  width: 100%;
+  height: 50px;
 }
 
 .reset-link {
-    padding: 15px;
-    color: $secondary-color;
-    text-decoration: underline;
+  padding: 15px;
+  color: $secondary-color;
+  text-decoration: underline;
 }
 
 .login-data {
-    width: 100%;
-    max-width: 350px;
-    // padding-top: 30px;
-    margin: 0 auto;
-    font-size: 20px;
+  width: 100%;
+  max-width: 350px;
+  // padding-top: 30px;
+  margin: 0 auto;
+  font-size: 20px;
 
 }
 
 .login-data p {
-    margin: 0;
-    color: grey;
-    display: inline-block;
+  margin: 0;
+  color: grey;
+  display: inline-block;
 }
 
 // .login-data p:hover {
@@ -103,12 +114,12 @@ mat-form-field {
 // }
 
 .login-data input {
-    height: 40px;
-    border-radius: 5px;
-    outline: none;
-    // border: 1px solid gray;
-    font-size: 18px;
-    width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  // border: 1px solid gray;
+  font-size: 18px;
+  width: 100%;
 }
 
 // .login-data input:hover,
@@ -117,39 +128,46 @@ mat-form-field {
 // }
 
 .login-submit {
-    height: 30px;
-    cursor: pointer;
-    background: $secondary-color;
-    color: white;
-    // border: 1px solid gray;
+  height: 30px;
+  cursor: pointer;
+  background: $secondary-color;
+  color: white;
+  // border: 1px solid gray;
 }
 
 .login-submit-area {
-    width: 80%;
-    padding-top: 30px;
-    /* border: 1px solid red; */
-    margin: 0 auto;
-    font-size: 20px;
+  width: 80%;
+  padding-top: 30px;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  font-size: 20px;
 }
 
 .login-submit-area input {
-    height: 40px;
-    border-radius: 5px;
-    outline: none;
-    color: $background-color;
-    border: 1px solid $purple;
-    font-size: 18px;
-    width: 100%;
-    background: $secondary-color;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  color: $background-color;
+  border: 1px solid $purple;
+  font-size: 18px;
+  width: 100%;
+  background: $secondary-color;
 }
 
 .login-submit-area input:hover {
-    border: 1px solid $purple;
-    color: $purple;
-    padding: 0;
+  border: 1px solid $purple;
+  color: $purple;
+  padding: 0;
 }
 
 .reset-link a:hover {
-    color: $purple;
-    cursor: pointer;
+  color: $purple;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+  .login-component {
+    margin-left: 0;
+  }
 }

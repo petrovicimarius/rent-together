@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,6 +9,12 @@ import { Router } from '@angular/router';
 export class AnnouncementComponent implements OnInit {
 
   slideIndex = 1;
+  checkScroll: boolean = false;
+  public lat = 46.128620;
+  public lng = 24.984512;
+  public zoom = 5;
+  public newAddress;
+  public mapOption;
   slider;
   imagesUrl = [
     './../../../../assets/fundal1.jpeg',
@@ -75,6 +81,44 @@ export class AnnouncementComponent implements OnInit {
         break;
       default:
         break;
+    }
+  }
+
+  convertAddress(address) {
+    this.newAddress = address;
+    this.newAddress = this.newAddress.replace(/ /g, "+");
+    // this.http
+    //   .get(
+    //     `https://maps.googleapis.com/maps/api/geocode/json?address=${
+    //     this.newAddress
+    //     }&key=AIzaSyAqcFHBPQuY6E-Fd5mn9DKlks8tHhHHewM`
+    //   )
+    //   .subscribe((res: any) => {
+    //     this.lat = res.results[0].geometry.location.lat;
+    //     this.lng = res.results[0].geometry.location.lng;
+    //   });
+  }
+
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (number > 400) {
+      this.checkScroll = true;
+    } else if (number < 400) {
+      this.checkScroll = false;
+    }
+  }
+
+  focusPoint(state): void {
+    if (state == true) {
+      this.lat = 47.6393487;
+      this.lng = 26.2551945;
+      this.zoom = 10;
+    }
+    else if (state == false) {
+      this.lat = 46.128620;
+      this.lng = 24.984512;
+      this.zoom = 5;
     }
   }
 

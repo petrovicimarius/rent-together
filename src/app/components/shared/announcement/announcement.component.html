@@ -62,21 +62,22 @@
           </div>
         </div>
       </div>
+      <div class="extra-info">
+        <textarea></textarea>
+      </div>
 
     </div>
-    <div class="extra-info">
-      <textarea></textarea>
-    </div>
-  </div>
-  <div class="location">
-    <div class="phone">
-
-    </div>
-    <div class="rating">
-
-    </div>
-    <div class="map">
-
+    <div class="location">
+      <span class="fa fa-map-marker-alt"> asdasdas asdasdasdad asda</span>
+      <div class="google-map">
+        <div class="container-map" [ngClass]="{'on-scroll-map': checkScroll}">
+          <agm-map [zoom]="zoom" [latitude]="lat" [longitude]="lng">
+            <agm-marker *ngFor="let point of mapPoints" [latitude]="point.lat" [longitude]="point.lng"
+              [ngClass]="focus">
+            </agm-marker>
+          </agm-map>
+        </div>
+      </div>
     </div>
   </div>
 </div>

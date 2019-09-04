@@ -40,8 +40,27 @@
   padding: 0 15px 0 15px;
   height: 100px;
 }
+.converted-price {
+  float: right;
+  font-size: 18px;
+}
+.converted-price select {
+  font-size: 18px;
+}
 .tehnical-data {
+  margin-top: 50px;
   max-width: 400px;
+  width: 100%;
+  display: grid;
+  border-right: 1px solid grey;
+  float: left;
+}
+.contact {
+  margin-top: 50px;
+  float: right;
+  max-width: 399px;
+  width: 100%;
+  text-align: center;
   display: grid;
 }
 .mark,
@@ -52,6 +71,9 @@
 .type,
 .consumption {
   width: 100%;
+  padding: 5px 0 5px 0;
+  font-size: 18px;
+  font-weight: bold;
 }
 .mark span:last-child,
 .model span:last-child,
@@ -61,6 +83,9 @@
 .type span:last-child,
 .consumption span:last-child {
   float: right;
+  width: 100px;
+  font-size: 16px;
+  font-weight: normal;
 }
 .mark span:first-child,
 .model span:first-child,
@@ -70,6 +95,36 @@
 .type span:first-child,
 .consumption span:first-child {
   float: left;
+}
+.fa-phone-square,
+.fa-envelope-square,
+.fa-bookmark {
+  height: 50px;
+  font-size: 22px;
+}
+.fa-phone-square span,
+.fa-envelope-square span,
+.fa-bookmark span {
+  display: block;
+  font-size: 18px;
+  margin-top: 5px;
+  color: black;
+}
+.fa-check-circle:before {
+  color: black;
+}
+.rating {
+  font-size: 18px;
+  height: 30px;
+}
+.rating::before {
+  content: "";
+}
+.fa-phone-square {
+  color: green;
+}
+.fa-envelope-square {
+  color: blue;
 }
 @media screen and (max-width: 600px) {
   .announcement-page {
